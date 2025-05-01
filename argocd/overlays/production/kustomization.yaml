@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# This imports the base Argo CD installation
+bases:
+  - ../../base
+
+# This adds our root application (App of Apps)
+resources:
+  - root-application.yaml
+
+# If you need to patch any Argo CD configuration for production
+patchesStrategicMerge:
+  - patch.yaml # Optional - for environment-specific overrides

@@ -1,0 +1,5 @@
+# clusters/my-cluster/apps/my-app/namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: my-app2
